@@ -24,7 +24,8 @@ Route::get('/', function () {
    
     return view('posts' ,[
 
-      'posts' => $posts
+      'posts' => $posts ,
+      'categories' => Category::all()
     ]
    
   );
@@ -49,6 +50,7 @@ Route::get('categories/{category:slug}' , function(Category $category){
    return view('posts' ,[
 
     'posts' => $posts 
+    
   ]
  
 );
